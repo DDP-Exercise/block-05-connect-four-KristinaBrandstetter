@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Connect Four</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--TODO: Build the Markup for your Game. Don't forget to style it in a cascading stylesheet. -->
+<!--TODO: Build the Markup for your Game. Don't forget to style it in a cascading stylesheet. -->
+<div id="message"></div>
+<div id="gameContainer">
+    <div id="Tom">
+        <img src="Tom.png" alt="Tom" class="playerImage">
+    </div>
+    <div id="gamingField"></div>
+    <div id="Jerry">
+        <img src="Jerry.png" alt="Jerry" class="playerImage">
+    </div>
+</div>
+<div id="playerDisplay">
+    <div id="TomDisplay">
+        <div class="playerCircle"></div>
+        <p>Tom</p>
+    </div>
+    <div id="JerryDisplay">
+        <div class="playerCircle"></div>
+        <p>Jerry</p>
+    </div>
+</div>
 
+</div>
+<script type="module" src="./js/controller.connectfour.js"></script>
+<script type="module" src="./js/model.connectfour.js"></script>
+<script type="module" src="./js/view.polished.js"></script>
 </body>
 </html>

@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c0392b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Comic Sans MS", cursive;
+}
+
+h1 {
+    color: #f9e4b7;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0px #7b0000;
+}
+
+#message {
+    color: #f9e4b7;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    min-height: 40px;
+    text-shadow: 2px 2px 0px #7b0000;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+#gamingField {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    background-color: #f9e4b7;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 5px;
+    box-shadow: 5px 5px 0px #7b0000;
+}
+
+#gamingField div {
+    background-color: #f0c070;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #c0392b;
+}
+
+#playerDisplay {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+#Tom, #Jerry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: #f9e4b7;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 0px #7b0000;
+}
+
+#TomDisplay, #JerryDisplay {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#TomDisplay .playerCircle {
+    background-color: #555d6a;
+}
+
+#JerryDisplay .playerCircle {
+    background-color: #8b5e3c;
+}
+
+#Tom.active, .playerImage, #Jerry.active .playerImage {
+    filter: grayscale(0%);
+}
+
+#Tom:not(.active) .playerImage, #Jerry:not(.active) .playerImage {
+    filter: grayscale(1000%);
+}
+
+.playerImage {
+    width: 300px;
+    height: auto;
+}
+
+.playerCircle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#Tom .playerCircle {
+    background-color: #555d6a;
+}
+
+#Jerry .playerCircle {
+    background-color: #8b5e3c;
+}
+
+#Tom.active .playerImage, #Jerry.active .playerImage {
+    filter: grayscale(0%);
+}
+
+#Tom:not(.active) .playerImage, #Jerry:not(.active) .playerImage {
+    filter: grayscale(100%);
+}
