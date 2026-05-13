@@ -37,11 +37,29 @@
  *
  *     The creation of this game should take you somewhere between
  *     8-10 hours of concentrated work.
- *     Bratlsoft - 2026-04-29
+ *     Kristina - 2026-05-13
  *******************************************************/
 
 
 //TODO: Create your controller-object. When initiated, it should boot
 //      the view (or views, if you decide to make a console-view).
 
+import { gameModel } from "./model.connectfour.js";
+import { view } from "./view.polished.js";
+
+export let controller = {
+    init() {
+        gameModel.init();
+        view.init();
+        document.getElementById("gamingField").addEventListener("click", function(event) {
+            let col = event.target.dataset.col;
+            if (col !== undefined) {
+                gameModel.insertStone(col);
+            }
+        })
+    }
+}
+
 //TODO: Add EventListeners, to forward the user inputs to the model.
+
+controller.init();
